@@ -1,0 +1,34 @@
+# Data & experiment artifacts
+/data/
+/experiments/
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+
+# Logs
+*.log
+*.out
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+.env
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# HuggingFace cache (if redirected locally)
+.cache/

@@ -1,0 +1,118 @@
+{
+  "method": "linear_probe",
+  "dataset": "banking77",
+  "seed": 42,
+  "epochs": 3,
+  "lr": 0.001,
+  "git": "96a759d",
+  "timestamp": "2026-06-14T14:53:09+00:00",
+  "wall_time_s": 1660.5,
+  "R": [
+    [
+      0.8681818181818182,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      0.0,
+      0.884090909090909,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      0.0,
+      0.0,
+      0.6772727272727272,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.825,
+      null,
+      null,
+      null
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.8204545454545454,
+      null,
+      null
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.8772727272727273,
+      null
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.8340909090909091
+    ]
+  ],
+  "metrics": {
+    "strategy": "sequential",
+    "ACC": 0.1192,
+    "Forgetting": 0.8254,
+    "BWT": -0.8254,
+    "final_cum_acc": 0.1192,
+    "total_time_s": 793.9,
+    "peak_vram_mb": 1499.1
+  },
+  "time_per_task": [
+    130.6,
+    115.2,
+    106.1,
+    105.3,
+    109.1,
+    110.6,
+    117.0
+  ],
+  "peak_vram_per_task": [
+    1498.5,
+    1496.6,
+    1498.7,
+    1498.8,
+    1498.9,
+    1499.0,
+    1499.1
+  ],
+  "num_classes_per_task": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77
+  ],
+  "spec": {
+    "strategy": "sequential",
+    "peft": "linear",
+    "replay": false,
+    "lr": 0.001,
+    "epochs": 3
+  }
+}

@@ -1,0 +1,16 @@
+# Sequential LoRA method config (extends config/base.yaml conceptually).
+# For the Phase-2 single-task harness, the relevant block is `method`.
+
+method:
+  name: sequential_lora
+  peft: lora            # lora | adapter | linear | full
+  lora_r: 8
+  lora_alpha: 16
+  lora_dropout: 0.1
+  target_modules: [query, value]
+
+train:
+  epochs: 3
+  lr: 1.0e-3
+  pooling: mean
+  cosine_scale: 16.0

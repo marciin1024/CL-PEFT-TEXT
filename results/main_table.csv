@@ -1,0 +1,8 @@
+method,strategy,dataset,seed,ACC,Forgetting,BWT,final_cum_acc,total_time_s,peak_vram_mb
+joint,joint,banking77,42,0.9172,,,0.9169,1180.1,1807.1
+linear_probe,sequential,banking77,42,0.1192,0.8254,-0.8254,0.1192,793.9,1499.1
+lora_er,sequential,banking77,42,0.8201,0.1682,-0.1682,0.8201,2517.1,1938.2
+naive_ft,sequential,banking77,42,0.1711,0.9458,-0.9458,0.1711,3191.4,2464.7
+per_task_lora_oracle,per_task_oracle,banking77,42,0.975,,,0.975,1385.4,1806.5
+sequential_adapter,sequential,banking77,42,0.1468,0.9686,-0.9686,0.1468,1330.7,2649.6
+sequential_lora,sequential,banking77,42,0.1513,0.9663,-0.9663,0.1513,1387.0,2284.6

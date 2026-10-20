@@ -1,0 +1,25 @@
+# Base configuration — data pipeline & task stream (Phase 1)
+# Method-specific configs (Phase 4) will extend/override this file.
+
+seed: 42                 # global RNG seed (training, shuffling, init)
+
+backbone:
+  name: roberta-base     # fallback: microsoft/deberta-v3-base
+  max_length: 64
+
+data:
+  dataset: banking77     # primary benchmark; sanity: ag_news
+  num_tasks: 7           # 7 tasks x 11 classes (Banking77 has 77 intents)
+  class_order_seed: 0    # change for task-order-sensitivity ablation
+  val_fraction: 0.1      # Banking77 has no val split -> carve from train
+  batch_size: 32         # fits 4 GB VRAM with frozen backbone + max_length 64
+  eval_batch_size: 64
+  num_workers: 2
+
+sanity:
+  dataset: ag_news
+  num_tasks: 2           # 2 tasks x 2 classes
+  class_order_seed: 0
+  max_train_per_class: 300   # AG News has ~30k/class; cap so the harness is fast
+  max_val_per_class: 100
+  max_test_per_class: 200

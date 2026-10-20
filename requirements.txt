@@ -1,0 +1,27 @@
+# Install PyTorch first, from the CUDA 12.4 index (see README):
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu124
+# Without that step pip may install a CPU-only build on Windows.
+
+# Core DL stack
+torch==2.5.1
+transformers==4.46.3
+peft==0.13.2
+datasets==3.1.0
+# pyarrow 16.1.0 is needed to match numpy 1.26.4 (a pyarrow built for numpy 2 crashes on import)
+pyarrow==16.1.0
+
+# The `adapters` library is not used: it pins an older transformers.
+# The bottleneck adapter is implemented in src/models/peft_adapter.py.
+
+# Scientific stack
+scikit-learn==1.5.2
+numpy==1.26.4
+pandas==2.2.3
+matplotlib==3.9.2
+
+# Utilities
+pyyaml==6.0.2
+tqdm==4.67.1
+
+# Dev
+pytest==8.3.4
