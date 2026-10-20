@@ -35,6 +35,11 @@ Three ablations on `lora_er`:
 - **Replay buffer size** (100, 200, 500, 1000): 0.58, 0.72, 0.83, 0.86. This is the parameter that matters.
 - **Class order** (3 orderings): 0.835 ± 0.008.
 
+<p align="center">
+  <img src="results/figures/ablation_buffer.png" width="48%" alt="Accuracy versus replay buffer size">
+  <img src="results/figures/ablation_rank.png" width="48%" alt="Accuracy versus LoRA rank">
+</p>
+
 Differences below about 0.01 should be read as noise. The rank-8 and buffer-500 points of the ablations are the same configuration, run at the same code version, and gave 0.827 and 0.833. The main table (0.820) was produced earlier, at a different commit, so I cannot say how much of its gap to those two is code and how much is noise. Seeds and cuDNN determinism are set, but I did not enable fully deterministic algorithms and training runs in fp16 on a GPU, so identical runs are not bit-identical. The main table is a single seed.
 
 Results are stored as CSV and JSON in `results/`, and `scripts.make_figures` regenerates every figure from the saved runs without retraining.
